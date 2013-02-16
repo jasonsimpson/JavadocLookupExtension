@@ -1,0 +1,3 @@
+content	javadocmozplugin content/
+overlay	chrome://browser/content/browser.xul	chrome://javadocmozplugin/content/overlay.xul
+

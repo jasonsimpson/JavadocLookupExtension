@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<prefwindow id="javadocmozplugin-prefs"
+    title="Javadoc Lookup Options"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script src="overlay.js"/>
+
+<prefpane id="javadocmozplugin-pref-pane" label="Javadoc Lookup Settings">
+  <preferences>
+
+    <preference id="pref_deepmenu" 
+                name="extensions.javadocmozplugin.deepmenu" 
+                type="bool" />
+    <preference id="pref_searchstrict" 
+                name="extensions.javadocmozplugin.searchstrict" 
+                type="bool" />
+    <preference id="pref_verboseclassname" 
+                name="extensions.javadocmozplugin.verboseclassname" 
+                type="bool" />
+
+    <preference id="pref_docurl1" 
+                name="extensions.javadocmozplugin.url1" type="string"/>
+    <preference id="pref_docurl2" 
+                name="extensions.javadocmozplugin.url2" type="string"/>
+    <preference id="pref_docurl3" 
+                name="extensions.javadocmozplugin.url3" type="string"/>
+    <preference id="pref_docurl4" 
+                name="extensions.javadocmozplugin.url4" type="string"/>
+    <preference id="pref_docurl5" 
+                name="extensions.javadocmozplugin.url5" type="string"/>
+
+    <preference id="pref_docname1" 
+                name="extensions.javadocmozplugin.name1" type="string"/>
+    <preference id="pref_docname2" 
+                name="extensions.javadocmozplugin.name2" type="string"/>
+    <preference id="pref_docname3" 
+                name="extensions.javadocmozplugin.name3" type="string"/>
+    <preference id="pref_docname4" 
+                name="extensions.javadocmozplugin.name4" type="string"/>
+    <preference id="pref_docname5" 
+                name="extensions.javadocmozplugin.name5" type="string"/>
+
+    <preference id="pref_docenabled1" 
+                name="extensions.javadocmozplugin.enabled1" type="bool"/>
+    <preference id="pref_docenabled2" 
+                name="extensions.javadocmozplugin.enabled2" type="bool"/>
+    <preference id="pref_docenabled3" 
+                name="extensions.javadocmozplugin.enabled3" type="bool"/>
+    <preference id="pref_docenabled4" 
+                name="extensions.javadocmozplugin.enabled4" type="bool"/>
+    <preference id="pref_docenabled5" 
+                name="extensions.javadocmozplugin.enabled5" type="bool"/>
+
+
+  </preferences>
+
+    <groupbox>
+        <caption label="Javadoc URLs"/>
+        <label value="In the URL field, specify the base URL of a javadoc. E.g. http://docs.oracle.com/javase/7/docs/api/" />
+        <grid>
+            <columns>
+                <column />
+                <column />
+                <column />
+            </columns>
+
+            <rows>
+                <row>
+                    <label  value="URL"
+                            class="header" />
+                    <label  value="Name"
+                            class="header" />
+                    <label  value="Enabled"
+                            class="header" />
+                </row>
+
+                <row> 
+                    <textbox preference="pref_docurl1" 
+                                id="docurl1" size="50" />
+                    <textbox preference="pref_docname1" 
+                                id="docname1" size="10" />
+                    <checkbox preference="pref_docenabled1" 
+                                id="docenabled1" />
+                </row>
+
+                <row>
+                    <textbox preference="pref_docurl2" 
+                                id="docurl2" size="50" />
+                    <textbox preference="pref_docname2" 
+                                id="docname2" size="10" />
+                    <checkbox preference="pref_docenabled2" 
+                                id="docenabled2" />
+                </row>
+
+                <row>
+                    <textbox preference="pref_docurl3" 
+                                id="docurl3" size="50" />
+                    <textbox preference="pref_docname3" 
+                                id="docname3" size="10" />
+                    <checkbox preference="pref_docenabled3" 
+                                id="docenabled3" />
+                </row>
+
+                <row>
+                    <textbox preference="pref_docurl4" 
+                                id="docurl4" size="50" />
+                    <textbox preference="pref_docname4" 
+                                id="docname4" size="10" />
+                    <checkbox preference="pref_docenabled4" 
+                                id="docenabled4" />
+                </row>
+
+                <row>
+                    <textbox preference="pref_docurl5" 
+                                id="docurl5" size="50" />
+                    <textbox preference="pref_docname5" 
+                                id="docname5" size="10" />
+                    <checkbox preference="pref_docenabled5" 
+                                id="docenabled5" />
+                </row>
+
+            </rows>
+        </grid>
+    </groupbox>
+
+    <hbox>
+        <caption flex="1" label="Menu depth" />
+    </hbox>
+    <hbox>
+        <radiogroup flex="1" 
+                    id="radio_deepmenu" 
+                    preference="pref_deepmenu"> 
+        <vbox>
+          <radio 
+            label="Shallow menus"
+            value="false" />
+          <radio 
+            label="Deeper menus"
+            value="true" />   
+        </vbox>
+        </radiogroup>
+    </hbox>
+
+    <hbox>
+        <caption flex="1" label="Show verbose class name" />
+    </hbox>
+    <hbox>
+        <radiogroup flex="1" 
+                    id="radio_verboseclassname" 
+                    preference="pref_verboseclassname"> 
+        <vbox>
+          <radio 
+            label="Show fully qualified class name and javadoc name"
+            value="true" />
+          <radio 
+            label="Show class name only"
+            value="false" />   
+        </vbox>
+        </radiogroup>
+    </hbox>
+
+
+    <hbox>
+        <caption flex="1" label="Search string" />
+    </hbox>
+    <hbox>
+        <radiogroup flex="1" 
+                    id="radio_searchstrict" 
+                    preference="pref_searchstrict"> 
+        <vbox>
+          <radio 
+                label="Match exact class name only"
+                value="true" />
+          <radio 
+                label="Match on substring"
+                value="false" />   
+        </vbox>
+        </radiogroup>
+    </hbox>
+
+    <vbox>
+        <separator flex="3" />
+        <hbox align="end" >
+            <spacer flex="1" />
+            <label  value="Please note you will need to restart your browser for these changes to take effect." />
+        </hbox>
+    </vbox>
+
+    <!-- Would be nice to have an apply button...
+        <hbox>
+            <spacer flex="1" />
+            <button label="Apply" 
+                    oncommand="javadocmozplugin.initDocPages();" />
+        </hbox>
+    -->
+
+</prefpane>
+
+</prefwindow>
+

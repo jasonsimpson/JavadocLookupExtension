@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet    href="chrome://javadocmozplugin/skin/overlay.css" 
+                    type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://javadocmozplugin/locale/overlay.dtd">
+
+<overlay id="javadocmozplugin-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script src="overlay.js"/>
+
+    <popup id="contentAreaContextMenu">
+        <menu id="javadocmozplugin-context-submenu" label="Javadoc">
+            <menupopup id="javadocmozplugin-context-submenu-popup">
+                <menuitem   id="javadocmozplugin-context-submenu-item" 
+                            label="Loading..." />
+            </menupopup>
+        </menu>
+    </popup>
+
+</overlay>
