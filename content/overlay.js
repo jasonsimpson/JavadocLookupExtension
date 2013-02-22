@@ -713,12 +713,27 @@ var javadocmozplugin = {
 
                     } else {
 
+                        //
                         // Get selection from document content
-
+                        //
                         selection = content.getSelection();
 
                         // Convert selection to string 
                         selection = selection.toString();
+
+                        //
+                        // Handle selection from frames.
+                        // Cases where selection is still an empty string
+                        // at this point.
+                        //
+                        for(var i = 0;
+                                selection == "" && i < content.frames.length;
+                                i++) {
+
+                            selection = 
+                                content.frames[i].getSelection().toString();
+                        }
+
                     }
 
                     // Trim selection
