@@ -1,9 +1,9 @@
-pref("extensions.javadocmozplugin.url1", "http://docs.oracle.com/javase/7/docs/api/");
-pref("extensions.javadocmozplugin.name1", "java 7");
+pref("extensions.javadocmozplugin.url1", "http://docs.oracle.com/javase/8/docs/api/");
+pref("extensions.javadocmozplugin.name1", "Java 8");
 pref("extensions.javadocmozplugin.enabled1", true);
 
-pref("extensions.javadocmozplugin.url2", "http://docs.oracle.com/javase/6/docs/api/");
-pref("extensions.javadocmozplugin.name2", "Java 6");
+pref("extensions.javadocmozplugin.url2", "http://docs.oracle.com/javase/7/docs/api/");
+pref("extensions.javadocmozplugin.name2", "Java 7");
 pref("extensions.javadocmozplugin.enabled2", true);
 
 pref("extensions.javadocmozplugin.url3", "http://commons.apache.org/lang/api/");
